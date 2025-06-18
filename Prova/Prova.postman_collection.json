@@ -1,0 +1,366 @@
+{
+	"info": {
+		"_postman_id": "848c541d-f68e-4918-bc38-a2f2aefb3fef",
+		"name": "Prova",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44963315"
+	},
+	"item": [
+		{
+			"name": "ver usuarios",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://fakestoreapi.com/users",
+					"protocol": "https",
+					"host": [
+						"fakestoreapi",
+						"com"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criar usuario",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"id\": 11,\r\n\"username\": \"vitinho\",\r\n\"email\": \"vitinho@vitinho.com\",\r\n\"password\": \"salve\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://fakestoreapi.com/users",
+					"protocol": "https",
+					"host": [
+						"fakestoreapi",
+						"com"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Usuario especifico",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://fakestoreapi.com/users/2",
+					"protocol": "https",
+					"host": [
+						"fakestoreapi",
+						"com"
+					],
+					"path": [
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login Erro",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"username\": \"vitor\",\r\n\"password\": \"vitorr\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://fakestoreapi.com/auth/login",
+					"protocol": "https",
+					"host": [
+						"fakestoreapi",
+						"com"
+					],
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Fone de Ouvido Sem Fio Teste\",\r\n    \"price\": 129.99,\r\n    \"description\": \"Fone Bluetooth com cancelamento de ruído e bateria de longa duração.\",\r\n    \"image\": \"https://m.media-amazon.com/images/I/514n0rnHIgL._UF1000,1000_QL80_.jpg\",\r\n    \"category\": \"electronics\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://fakestoreapi.com/products",
+					"protocol": "https",
+					"host": [
+						"fakestoreapi",
+						"com"
+					],
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post erro",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Fone de Ouvido Sem Fio Teste\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://fakestoreapi.com/products",
+					"protocol": "https",
+					"host": [
+						"fakestoreapi",
+						"com"
+					],
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Fone de Ouvido Sem Fio Teste\",\r\n    \"price\": 129.99,\r\n    \"description\": \"Fone Bluetooth com cancelamento de ruído e bateria de longa duração.\",\r\n    \"image\": \"https://i.pravatar.cc\",\r\n    \"category\": \"electronics\"\r\n}"
+				},
+				"url": {
+					"raw": "https://fakestoreapi.com/products",
+					"protocol": "https",
+					"host": [
+						"fakestoreapi",
+						"com"
+					],
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get produto 5",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://fakestoreapi.com/products/5",
+					"protocol": "https",
+					"host": [
+						"fakestoreapi",
+						"com"
+					],
+					"path": [
+						"products",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get categories",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Fone de Ouvido Sem Fio Teste\",\r\n    \"price\": 129.99,\r\n    \"description\": \"Fone Bluetooth com cancelamento de ruído e bateria de longa duração.\",\r\n    \"image\": \"https://m.media-amazon.com/images/I/514n0rnHIgL._UF1000,1000_QL80_.jpg\",\r\n    \"category\": \"electronics\"\r\n}"
+				},
+				"url": {
+					"raw": "https://fakestoreapi.com/products/categories",
+					"protocol": "https",
+					"host": [
+						"fakestoreapi",
+						"com"
+					],
+					"path": [
+						"products",
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get items jewerly",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://fakestoreapi.com/products/category/jewelery",
+					"protocol": "https",
+					"host": [
+						"fakestoreapi",
+						"com"
+					],
+					"path": [
+						"products",
+						"category",
+						"jewelery"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get carrinhos user 1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://fakestoreapi.com/carts?userId=1",
+					"protocol": "https",
+					"host": [
+						"fakestoreapi",
+						"com"
+					],
+					"path": [
+						"carts"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get product erro",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://fakestoreapi.com/product/99999",
+					"protocol": "https",
+					"host": [
+						"fakestoreapi",
+						"com"
+					],
+					"path": [
+						"product",
+						"99999"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar produto",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"description\": \"Uma camiseta de algodão super confortável, agora com nova cor!\",\r\n    \"price\": 25.50\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://fakestoreapi.com/products/2",
+					"protocol": "https",
+					"host": [
+						"fakestoreapi",
+						"com"
+					],
+					"path": [
+						"products",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
